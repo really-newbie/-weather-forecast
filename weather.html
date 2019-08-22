@@ -22,6 +22,7 @@
             height: 35px;
             border-radius: 5px;
             font-size: 20px;
+            margin: 20px 0 0 77px;
         }
         #select{
             background-color: rgba(165, 3, 12, 0.99);
@@ -45,7 +46,7 @@
         }
         #bottom-top{
             width: 730px;
-            height: 240px;
+            height: 260px;
         }
         .bottom-bottom{
             background-color: rgba(15, 217, 0, 0.7);
@@ -175,6 +176,10 @@
                         $('<div class="font">'+res.data[i].win[0]+res.data[i].win_speed+'</div>').appendTo('#day'+i);//风向
                     }
                     path(res.data[0]);
+                    $('#'+0).css('background-color','rgba(135, 17, 238, 0.79)');
+                    for (var j =1;j<7;j++){
+                        $('#'+j).css('background-color','rgba(35, 17, 238, 0.59)');
+                    }
                 }
             });
         });
