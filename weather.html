@@ -141,7 +141,7 @@
             $.ajax({
                 type: 'GET',
                 url: 'https://www.tianqiapi.com/api/',
-                data: 'version=v1&city='+document.querySelector("#city").value,
+                data: 'version=v1&appid=18254637&appsecret=9CyWNnCC&city='+document.querySelector("#city").value,
                 dataType: 'JSON',
                 error: function () {
                     alert('网络错误');
@@ -151,6 +151,7 @@
                     localStorage.setItem("res",JSON.stringify(res));//将结果处理为字符串保存
                     console.log(res);
                     // console.log(res.data[0].wea);
+                    console.log(res.data.length);
                     for(var i = 0;i < res.data.length; i++){//七日天气
                         $('#day'+i).remove();//清理旧数据
                         $('<div id="day'+i+'"></div>').appendTo('#'+i);//
