@@ -47,19 +47,21 @@
         }
         #bottom-top{
             width: 730px;
-            height: 260px;
+            height: 250px;
+            margin-top:10px;
         }
         .bottom-bottom{
             background-color: rgba(15, 217, 0, 0.7);
             width: 680px;
             height: 240px;
+            margin-top:10px;
         }
         .day{
             background-color: rgba(35, 17, 238, 0.59);
-            display: inline-block;
+            float:left;
             width: 97px;
             height: 240px;
-            margin: 0 1px;
+            margin: 0 3px;
             text-align: center;
         }
         .time{
@@ -174,7 +176,7 @@
                         $('<img src="weather/'+wea1+'.gif">').appendTo('#day'+i);
                         $('<img src="weather/'+wea2+'.gif">').appendTo('#day'+i);//气象图标
                         $('<div class="font">'+res.data[i].wea+'</div>').appendTo('#day'+i);//气象说明
-                        $('<div class="font">'+res.data[i].tem1+'-'+res.data[i].tem1+'</div>').appendTo('#day'+i);//温度
+                        $('<div class="font">'+res.data[i].tem1+'-'+res.data[i].tem2+'</div>').appendTo('#day'+i);//温度
                         $('<div class="font">'+res.data[i].win[0]+res.data[i].win_speed+'</div>').appendTo('#day'+i);//风向
                     }
                     path(res.data[0]);
